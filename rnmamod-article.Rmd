@@ -396,25 +396,26 @@ t1 %>%
 
 ## Functions on data preparation and model implementation
 
-The `run_model()` function has a central role in the architecture of the __rnmamod__ 
-package. It is the function of conducting the core NMA model and related analyses 
-to assess the underlying assumptions of NMA. It also comprises the object of most 
-functions to create the necessary visualisations. Initially, `run_model()` calls 
-the `data_preparation()` function to prepare the dataset in the proper format to 
-fit the model in JAGS. The dataset is provided in the one-study-per-row format, 
-typical for codes written in the BUGS language. Then `run_model()` bundles the 
-dataset and the necessary parameters (they have been processed through the 
+The `run_model()` function plays a central role in the architecture of the __rnmamod__ 
+package. It is responsible for fitting the core NMA model and related analyses 
+to assess the underlying assumptions of NMA. It also comprises the R object for most 
+functions useed to create the necessary visualisations. 
+Initially, `run_model()` calls 
+the `data_preparation()` function to appropriately prepare the format of the dataset
+for JAGS modelling. The dataset is provided in the one-study-per-row format, which is
+typical for code written in the BUGS language. Then `run_model()` bundles the 
+dataset along with the necessary parameters (previously processed through the 
 `missingness_param_prior()`, `heterogeneity_param_prior()`, and `baseline_model()` 
 functions) to conduct NMA through the `prepare_model()` function. The `prepare_model()` 
-function contains the code in BUGS language to conduct a hierarchical one-stage 
-NMA, as published by the NICE Decision Support Unit in a series of tutorial papers 
+function contains the code in BUGS language for performing a hierarchical one-stage 
+NMA, following the methodology published by the NICE Decision Support Unit in a series of tutorial papers 
 on evidence synthesis methods for decision-making [@Dias2013]. The `missingness_param_prior()` 
 and `heterogeneity_param_prior()` functions process the hyperparameters of the 
 selected prior distribution for the informative missingness parameter and the 
-between-study heterogeneity parameter, respectively, to be read by JAGS. 
-The `baseline_model()` function is relevant only in the case of a binary outcome. 
+between-study heterogeneity parameter, respectively, preparing them for use by JAGS. 
+The `baseline_model()` function is relevant only when dealing with binary outcomes. 
 It processes the baseline risk defined by the user or the default option before 
-conducting NMA. 
+perfoming NMA. 
 
 Subsequent analyses associated with the underlying assumptions of NMA are performed 
 by specially devised functions that inherit most arguments from `run_model()`. 
