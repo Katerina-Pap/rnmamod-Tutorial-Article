@@ -280,39 +280,39 @@ $$\begin{aligned}
 \zeta_{ik} = \dfrac{\theta^{m}_{ik}}{\theta^{c}_{ik}} = \dfrac{E(Y_{ikj} | M_{ikj} = 1)}{E(Y_{ikj} | M_{ikj} = 0)}.
 \end{aligned}$$
 
-The response probability ratio [@Magder2003; @Turner2015] aligns better with a 
-selection model that distinguishes the participants based on their outcome and 
-then further distinguishes between those completing and those leaving the assigned 
-intervention prematurely [@Little1995]. The success probability ratio [@Akl2013; 
-@Turner2015] is more likely to be used with the risk ratio for also being a ratio 
-of risks. The IMRoM is intuitively related to the ratio of means [@Mavridis2015]. 
-Finally, IMOR and IMDoM are more likely to be used in conjunction to the OR and 
+The response probability ratio [@Magder2003; @Turner2015] aligns better with a different approach for dealing with missing data, i.e., the  
+selection model. This model distinguishes the participants based on their outcome and 
+then further categorises them into those who completed the assigned 
+intervention and those who left prematurely [@Little1995]. The success probability ratio [@Akl2013; 
+@Turner2015], on the other hand, is more suited for use with the risk ratio, as it represents a ratio 
+of risks. IMRoM is intuitively related to the ratio of means [@Mavridis2015]. 
+Finally, IMOR and IMDoM are more commonly used in conjunction with the OR and 
 the mean difference (MD) and standardised mean difference, respectively. In this 
-article, we will consider only the IMOR and IMDoM due to their intuitive relation 
-to the aforementioned effect measures which are also the most frequently used in 
+article, we will only consider IMOR and IMDoM due to their intuitive relationship 
+with the aforementioned effect measures which are also the most frequently employed in 
 published systematic reviews and relevant methodological literature [@Friedrich2008; 
 @Nikolakopoulou2014; @Bakbergenuly2019].
 
-The informative missingness parameters IMDoM and IMOR in the logarithmic scale 
-(log IMOR) take values in ${\rm I\!R}$ with zero implying the missing at random 
-assumption (ignorable missingness) and non-zero values indicating the missing not 
-at random assumption (non-ignorable missingness). Essentially, the informative 
-missingness parameters quantify departures from the missing at random assumption. 
-Since these parameters are unknown, the analysts can consider one of the following 
+The informative missingness parameters, IMDoM and IMOR, in the logarithmic scale 
+(log IMOR), can take values in ${\rm I\!R}$, where a value zero implies the missing-at-random 
+assumption (ignorable missingness), while non-zero values indicate the missing-not-at-random assumption 
+(non-ignorable missingness). Essentially, these informative 
+missingness parameters quantify deviations from the missing-at-random assumption. 
+As these parameters are typically unknown, analysts can consider one of the following 
 situations: 
 
 * assign a fixed value, which corresponds to imputation [@Higgins2008; @Turner2015; @Spineli2019],
 * assume a distribution with suggested parameter values and proceed with a two-stage 
-approach to synthesise the trials using their adjusted treatment effects and variances 
+approach to synthesise the trials, using their adjusted treatment effects and variances 
 for missing participants obtained through the Taylor series approximation in the 
 first stage [@White2008; @Mavridis2015], or 
 * use the Bayesian framework to estimate their posterior distribution via an one-stage 
 approach to synthesise the trials [@Turner2015; @Spineli2019; @Spineli2021]. 
 
-Typically, a normal distribution is assigned on both informative missingness parameters 
+Typically, a normal distribution is assigned to both informative missingness parameters 
 [@Higgins2008; @White2008; @Mavridis2015; @Turner2015; @Spineli2019; @Spineli2021]. 
-In the Bayesian framework, the analysts assign a prior normal distribution on these 
-parameters and can determine the mean and variance of the normal distribution to 
+In the Bayesian framework, analysts may assign a normal prior distribution on these 
+parameters and can specify the mean and variance of the normal distribution to 
 be common across the trials and intervention arms, specific to the interventions or 
 trials, as well as identical, hierarchical or independent [@Turner2015; @Spineli2019; 
 @Spineli2021]. Table 
